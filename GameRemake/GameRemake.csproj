@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DD11FC3-431A-47ED-8AAB-FFBEFB214470}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GameRemake</RootNamespace>
+    <AssemblyName>GameRemake</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameclear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start_image.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Track-Top-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Track-Top-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Track-Top-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile-Bottom-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile-Bottom-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_die_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_die_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_die_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_die_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_die_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_die_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_die_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_die_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_die_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_die_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_die_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_die_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_die_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_die_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_die_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_die_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_die_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_die_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_die_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_die_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_die_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_die_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_die_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_die_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_die_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_die_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_die_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_die_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_die_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom_die_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower_die_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower_die_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower_die_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower_die_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower_die_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower_die_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower_die_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower_die_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_die_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_die_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_die_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_die_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_die_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_die_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_die_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_die_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_potion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_potion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gld_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gld_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gld_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gld_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bundle_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bundle_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bundle_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bundle_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brz_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brz_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brz_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brz_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smash_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smash_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smash_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smash_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smash_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smash_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smash_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smash_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smash_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crush_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crush_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crush_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crush_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boom_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boom_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boom_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boom_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collision.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attack_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attack_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attack_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attack_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attack_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attack_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attack_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonModule\CommonModule.csproj">
+      <Project>{6d4905f3-fc47-4028-9cd6-9bf2c4efc09d}</Project>
+      <Name>CommonModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reinhardt.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ripper.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game_bgm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_bgm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mccree.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
